@@ -5,12 +5,12 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol";
 
-contract GGLT is ERC20, Ownable {
+contract GLT is ERC20, Ownable {
     using SafeMath for uint;
     uint maxSupply = 200000000*10**18;
 
-   constructor() ERC20('Gokyo Labs Governance Token','GGLT') {
-       _mint(msg.sender,100000000*10**18);
+   constructor() ERC20('Gokyo Labs Token','GLT') {
+       _mint(msg.sender,1000000000000*10**18);
    }
 
    function mint(address _to, uint _amount) external onlyOwner{
